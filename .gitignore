@@ -1,0 +1,10 @@
+# Build output
+build/
+dist/
+
+# Downloaded dependencies (build.py --fetch-deps)
+deps/
+
+# Python
+__pycache__/
+*.pyc

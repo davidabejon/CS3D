@@ -1,0 +1,10 @@
+Plantilla 3DS (citro2d + HTTPS)
+
+The networking code in source/net/ and the build script are derived from
+3DSpotify (https://github.com/davidabejon/3DSpotify), which in turn includes
+code from SpotiBacan (https://github.com/ohquebacan/spotibacan) by ohquebacan.
+Both are distributed under the Apache License 2.0 (see LICENSE).
+
+mbedTLS (downloaded by build.py into deps/) is distributed under the Apache
+License 2.0 / GPL-2.0-or-later. libctru, citro3d and citro2d are distributed
+under the zlib license.

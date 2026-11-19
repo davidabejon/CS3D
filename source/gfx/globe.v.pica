@@ -1,0 +1,32 @@
+; The globe's map tiles (gfx/globe.c). Vertices arrive already projected to
+; screen pixels by the CPU; this only applies the screen's projection and
+; passes the texture coordinate and the shade (darker towards the rim) on.
+
+.fvec projection[4]
+
+.constf consts(0.0, 1.0, 0.00392156862745, 0.0)
+.alias  ones     consts.yyyy
+; Byte attributes arrive as 0..255, not normalized.
+.alias  clrscale consts.zzzz
+
+.out outpos position
+.out outtc0 texcoord0
+.out outclr color
+
+.alias inpos v0
+.alias intex v1
+.alias inclr v2
+
+.proc main
+	mov r0.xyz, inpos
+	mov r0.w, ones
+
+	dp4 outpos.x, projection[0], r0
+	dp4 outpos.y, projection[1], r0
+	dp4 outpos.z, projection[2], r0
+	dp4 outpos.w, projection[3], r0
+
+	mov outtc0, intex
+	mul outclr, clrscale, inclr
+	end
+.end

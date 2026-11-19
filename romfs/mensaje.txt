@@ -1,0 +1,1 @@
+Este texto viene de romfs:/mensaje.txt. Todo lo que pongas en la carpeta romfs/ va empaquetado dentro del .3dsx y del .cia.

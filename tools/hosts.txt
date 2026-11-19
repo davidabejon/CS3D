@@ -1,0 +1,15 @@
+# Hosts your app connects to, one per line: host, or host:port (443 when
+# omitted). gen_ca_bundle.py finds the root each one chains to and puts it
+# in source/net/ca_bundle.c. Lines starting with # are comments.
+#
+# Radio streams are not listed: there are tens of thousands, on any CA, and
+# their audio is fetched without requiring a verified chain (radio3ds.c).
+# The roots in ALWAYS (gen_ca_bundle.py) still verify most of them.
+
+# The radio-browser.info API mirrors (source/app/radiobrowser.c):
+de1.api.radio-browser.info
+de2.api.radio-browser.info
+all.api.radio-browser.info
+
+# OpenStreetMap raster tiles for the globe (source/gfx/tiles.c):
+tile.openstreetmap.org
