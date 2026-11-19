@@ -29,7 +29,7 @@ APP_TITLE = "CS3D"
 APP_DESCRIPTION = "3DS radio player"
 APP_PUBLISHER = "David Abejón"
 # Sent as the User-Agent of every HTTP request (http3ds.h).
-APP_USER_AGENT = "cs3d/0.1"
+APP_USER_AGENT = "cs3d/0.1 (+https://github.com/davidabejon/CS3D)"
 # --------------------------------------------------------------------------
 
 ROOT = Path(__file__).resolve().parent
